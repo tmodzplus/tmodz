@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Cập nhật phiên bản TModz v2.5 - Tối ưu chống giật lag cực mạnh",
+    "date": "16/09/2026",
+    "summary": "Bản cập nhật mới nhất giúp cải thiện tốc độ khung hình khi vào phòng nhảy đông người, fix lỗi văng game ở một số máy cấu hình thấp.",
+    "category": "Cập Nhật",
+    "link": "#"
+  },
+  {
+    "id": 2,
+    "title": "Hướng dẫn cài đặt và sử dụng tool cho người mới bắt đầu",
+    "date": "14/09/2026",
+    "summary": "Tổng hợp các bước từ tải file, tắt phần mềm diệt virus hiểu lầm đến cách kích hoạt và sử dụng mượt mà không gặp lỗi.",
+    "category": "Hướng Dẫn",
+    "link": "#"
+  },
+  {
+    "id": 3,
+    "title": "Sự kiện đua Top VIP tháng 9 nhận quà khủng từ BQT",
+    "date": "10/09/2026",
+    "summary": "Chi tiết thể lệ tham gia sự kiện dành riêng cho các thành viên VIP gắn bó lâu năm cùng hệ thống TModz.",
+    "category": "Sự Kiện",
+    "link": "#"
+  }
+]
