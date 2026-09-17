@@ -301,10 +301,17 @@
     </section>
 
     <!-- Script tự động nạp bài viết từ posts.json -->
+    <!-- Script fetch file posts.json tối ưu cho GitHub Pages -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
+            // Sử dụng đường dẫn tương đối để fetch file posts.json cùng cấp trên GitHub
             fetch('posts.json')
-                .then(response => response.json())
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Không thể tải file posts.json');
+                    }
+                    return response.json();
+                })
                 .then(posts => {
                     const container = document.getElementById('posts-container');
                     container.innerHTML = '';
@@ -334,8 +341,8 @@
                     });
                 })
                 .catch(error => {
-                    console.error('Không thể tải file posts.json:', error);
-                    document.getElementById('posts-container').innerHTML = '<p class="text-slate-500 col-span-3 text-center">Chưa có bài viết nào được cập nhật.</p>';
+                    console.error('Lỗi khi tải bài viết:', error);
+                    document.getElementById('posts-container').innerHTML = '<p class="text-slate-500 col-span-3 text-center">Chưa tải được bài viết. Hãy kiểm tra lại định dạng file posts.json của bạn.</p>';
                 });
         });
     </script>
