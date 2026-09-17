@@ -301,10 +301,9 @@
     </section>
 
     <!-- Script tự động nạp bài viết từ posts.json -->
-    <!-- Script fetch file posts.json tối ưu cho GitHub Pages -->
+    <!-- Script fetch file posts.json và đồng bộ màu sắc theo từng thẻ contact-card -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            // SỬ DỤNG DÒNG NÀY (Thêm ?v=... để ép trình duyệt không lưu cache cũ)
             fetch('posts.json?v=' + new Date().getTime())
                 .then(response => {
                     if (!response.ok) {
@@ -317,21 +316,37 @@
                     container.innerHTML = '';
                     
                     posts.forEach((post, index) => {
+                        // Xoay vòng từ contact-card-1 đến contact-card-4
                         const colorIndex = (index % 4) + 1;
                         const colorClass = `contact-card-${colorIndex}`;
+                        
+                        // Định nghĩa màu sắc tương ứng với từng thẻ để áp dụng vào chữ
+                        let accentColorClass = "text-pink-400 hover:text-pink-300";
+                        let badgeBgClass = "bg-pink-500/10 text-pink-400 border-pink-500/20";
+                        
+                        if (colorIndex === 2) {
+                            accentColorClass = "text-cyan-400 hover:text-cyan-300";
+                            badgeBgClass = "bg-cyan-500/10 text-cyan-400 border-cyan-500/20";
+                        } else if (colorIndex === 3) {
+                            accentColorClass = "text-blue-400 hover:text-blue-300";
+                            badgeBgClass = "bg-blue-500/10 text-blue-400 border-blue-500/20";
+                        } else if (colorIndex === 4) {
+                            accentColorClass = "text-emerald-400 hover:text-emerald-300";
+                            badgeBgClass = "bg-emerald-500/10 text-emerald-400 border-emerald-500/20";
+                        }
                         
                         const postCard = `
                             <div class="card-custom ${colorClass} p-6 rounded-2xl flex flex-col justify-between">
                                 <div>
                                     <div class="flex justify-between items-center mb-4">
-                                        <span class="bg-cyan-500/10 text-cyan-400 text-xs font-bold px-3 py-1 rounded-full border border-cyan-500/20">${post.category}</span>
+                                        <span class="${badgeBgClass} text-xs font-bold px-3 py-1 rounded-full border">${post.category}</span>
                                         <span class="text-slate-500 text-xs">${post.date}</span>
                                     </div>
-                                    <h3 class="text-lg font-bold mb-3 text-white hover:text-cyan-300 transition cursor-pointer">${post.title}</h3>
+                                    <h3 class="text-lg font-bold mb-3 text-white hover:${accentColorClass.split(' ')[0]} transition cursor-pointer">${post.title}</h3>
                                     <p class="text-slate-400 text-sm leading-relaxed mb-6">${post.summary}</p>
                                 </div>
                                 <div>
-                                    <a href="${post.link}" class="text-cyan-400 hover:text-cyan-300 text-sm font-semibold flex items-center space-x-1 transition">
+                                    <a href="${post.link}" class="${accentColorClass} text-sm font-semibold flex items-center space-x-1 transition">
                                         <span>Xem chi tiết &rarr;</span>
                                     </a>
                                 </div>
