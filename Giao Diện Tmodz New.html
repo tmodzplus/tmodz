@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TModz Plus Audition Support — Công cụ Đỉnh Cao</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Montserrat', sans-serif; background-color: #060810; color: #f3f4f6; }
+        
+        /* Hiệu ứng nền Cyberpunk Glow */
+        .hero-glow {
+            background: radial-gradient(circle, rgba(236,72,153,0.18) 0%, rgba(6,8,16,0) 70%);
+        }
+        .glass-nav {
+            background: rgba(10, 14, 26, 0.85);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(236, 72, 153, 0.2);
+        }
+        .card-custom {
+            background: rgba(18, 24, 41, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s ease;
+        }
+        .card-custom:hover {
+            transform: translateY(-5px);
+        }
+
+        /* 1. Hiệu ứng chữ nhấp nháy cho Tiêu đề lớn ở Hero */
+        @keyframes cyberpunk-glow {
+            0%, 100% {
+                text-shadow: 0 0 10px rgba(236, 72, 153, 0.8), 
+                             0 0 20px rgba(236, 72, 153, 0.5), 
+                             0 0 40px rgba(6, 182, 212, 0.6), 
+                             0 0 80px rgba(6, 182, 212, 0.3);
+                color: #ffffff;
+            }
+            50% {
+                text-shadow: 0 0 5px rgba(236, 72, 153, 0.4), 
+                             0 0 15px rgba(6, 182, 212, 0.4), 
+                             0 0 30px rgba(6, 182, 212, 0.2);
+                color: #22d3ee;
+            }
+        }
+        .cyber-neon-title {
+            animation: cyberpunk-glow 3s infinite ease-in-out;
+        }
+
+        /* 2. Hiệu ứng chữ nhấp nháy riêng cho Header Logo */
+        @keyframes header-flash {
+            0%, 100% {
+                text-shadow: 0 0 8px rgba(6, 182, 212, 0.6), 0 0 15px rgba(236, 72, 153, 0.4);
+                opacity: 1;
+            }
+            50% {
+                text-shadow: 0 0 3px rgba(6, 182, 212, 0.2);
+                opacity: 0.85;
+            }
+        }
+        .header-neon-flashing {
+            animation: header-flash 2s infinite ease-in-out;
+        }
+
+        /* Hiệu ứng viền phát sáng khi hover cho 4 mục liên hệ */
+        .contact-card-1:hover { border-color: #ec4899; box-shadow: 0 0 20px rgba(236, 72, 153, 0.4); }
+        .contact-card-2:hover { border-color: #06b6d4; box-shadow: 0 0 20px rgba(6, 182, 212, 0.4); }
+        .contact-card-3:hover { border-color: #3b82f6; box-shadow: 0 0 20px rgba(59, 130, 246, 0.4); }
+        .contact-card-4:hover { border-color: #10b981; box-shadow: 0 0 20px rgba(16, 185, 129, 0.4); }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between relative overflow-x-hidden">
+
+    <!-- Hiệu ứng sáng nền Cyberpunk -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[600px] hero-glow pointer-events-none z-0"></div>
+
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-nav">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Logo Hình Ảnh & Tên Thương Hiệu (Có hiệu ứng nhấp nháy) -->
+            <div class="flex items-center space-x-3">
+                <a href="#" class="flex items-center space-x-3 group">
+                    <img src="assets/image.png" alt="TModz Logo" class="w-10 h-10 rounded-xl object-cover border border-pink-500/40 group-hover:border-cyan-400 transition shadow-[0_0_10px_rgba(236,72,153,0.3)]">
+                    <span class="text-lg sm:text-xl font-extrabold tracking-wider bg-gradient-to-r from-pink-500 via-purple-400 to-cyan-400 bg-clip-text text-transparent header-neon-flashing">
+                        TModz Plus Audition
+                    </span>
+                </a>
+            </div>
+
+            <nav class="hidden md:flex space-x-8 text-sm font-semibold">
+                <a href="#trangchu" class="text-pink-400 hover:text-pink-300 transition">Trang Chủ</a>
+                <a href="#tinhnang" class="text-slate-300 hover:text-amber-400 transition">Tính Năng</a>
+                <a href="#baiviet" class="text-slate-300 hover:text-cyan-400 transition">Bài Viết</a>
+                <a href="#taixuong" class="text-slate-300 hover:text-emerald-400 transition">Tải Xuống</a>
+                <a href="#lienhe" class="text-slate-300 hover:text-blue-400 transition">Liên Hệ</a>
+            </nav>
+            <div>
+                <a href="#lienhe" class="bg-gradient-to-r from-pink-600 to-cyan-500 hover:from-pink-500 hover:to-cyan-400 text-white font-extrabold text-sm px-5 py-2.5 rounded-full shadow-lg shadow-pink-500/25 transition">
+                    Hỗ Trợ Ngay
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow pt-32 pb-16 z-10">
+        
+        <!-- 1. TRANG CHỦ -->
+        <section id="trangchu" class="max-w-5xl mx-auto px-4 text-center mt-10">
+            <span class="inline-block bg-pink-500/10 text-pink-400 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest mb-4 border border-pink-500/30 shadow-[0_0_10px_rgba(236,72,153,0.2)]">
+                ⚡ Cyberpunk Edition - Phiên bản 2026
+            </span>
+            <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight mb-6">
+                Trải Nghiệm Audition <br>
+                <span class="cyber-neon-title">Mượt Mà & Đỉnh Cao</span>
+            </h1>
+            <p class="text-slate-400 text-lg max-w-2xl mx-auto mb-10">
+                Hệ thống công cụ hỗ trợ đỉnh cao với giao diện neon mang phong cách tương lai, tối ưu tuyệt đối cho vũ trường Audition.
+            </p>
+            <div id="taixuong" class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#" class="w-full sm:w-auto bg-gradient-to-r from-emerald-500 to-cyan-600 hover:from-emerald-400 hover:to-cyan-500 text-slate-950 font-extrabold px-8 py-4 rounded-xl shadow-xl shadow-cyan-500/20 transition flex items-center justify-center space-x-2">
+                    <span>📥 Tải Bản Mod Ngay (v2.5)</span>
+                </a>
+                <a href="#tinhnang" class="w-full sm:w-auto card-custom hover:bg-slate-800/80 text-amber-400 font-bold px-8 py-4 rounded-xl transition flex items-center justify-center space-x-2 border-amber-500/20">
+                    <span>⚡ Khám Phá Tính Năng</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- 2. TÍNH NĂNG -->
+        <section id="tinhnang" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-28 pt-10">
+            <div class="text-center mb-12">
+                <span class="text-amber-400 text-xs font-bold uppercase tracking-widest bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/30">🚀 Hiệu Năng Vượt Trội</span>
+                <h2 class="text-3xl font-extrabold text-white mt-3">Tính Năng Nổi Bật</h2>
+                <p class="text-slate-400 text-sm mt-1">Được thiết kế tối ưu hóa mang lại trải nghiệm tuyệt vời nhất</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card-custom p-8 rounded-2xl hover:border-amber-500/50">
+                    <div class="w-12 h-12 bg-amber-500/10 rounded-xl flex items-center justify-center text-amber-400 text-xl font-bold mb-6 border border-amber-500/20">⚡</div>
+                    <h3 class="text-xl font-bold mb-3 text-amber-300">Tối Ưu Hiệu Năng</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Giảm giật lag tối đa, thao tác mượt mà trong các phòng nhảy đông người hoặc sàn đấu beat cao.</p>
+                </div>
+                <div class="card-custom p-8 rounded-2xl hover:border-amber-500/50">
+                    <div class="w-12 h-12 bg-amber-500/10 rounded-xl flex items-center justify-center text-amber-400 text-xl font-bold mb-6 border border-amber-500/20">🛡️</div>
+                    <h3 class="text-xl font-bold mb-3 text-amber-300">An Toàn & Ổn Định</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Được cập nhật thường xuyên theo các bản patch mới nhất của nhà phát hành, hạn chế tối đa lỗi phát sinh.</p>
+                </div>
+                <div class="card-custom p-8 rounded-2xl hover:border-amber-500/50">
+                    <div class="w-12 h-12 bg-amber-500/10 rounded-xl flex items-center justify-center text-amber-400 text-xl font-bold mb-6 border border-amber-500/20">💎</div>
+                    <h3 class="text-xl font-bold mb-3 text-amber-300">Hệ Thống Thông Minh</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Giao diện điều khiển trực quan, dễ dàng sử dụng và tương thích với mọi phiên bản Windows hiện hành.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. BÀI VIẾT -->
+        <section id="baiviet" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-28 pt-10">
+            <div class="text-center mb-12">
+                <span class="text-cyan-400 text-xs font-bold uppercase tracking-widest bg-cyan-500/10 px-3 py-1 rounded-full border border-cyan-500/30">📝 Góc Tin Tức</span>
+                <h2 class="text-3xl font-extrabold text-white mt-3">Bài Viết & Cập Nhật</h2>
+                <p class="text-slate-400 text-sm mt-1">Cập nhật thông tin, hướng dẫn và sự kiện từ file posts.json</p>
+            </div>
+            <!-- Khu vực danh sách bài viết render từ posts.json -->
+            <div id="posts-container" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="text-center text-slate-500 col-span-3 py-6">Đang tải danh sách bài viết...</div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 4. PHẦN LIÊN HỆ VỚI 4 MỤC RIÊNG BIỆT -->
+    <section id="lienhe">
+        <footer class="border-t border-slate-800 bg-slate-950 py-16 mt-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <span class="text-pink-400 text-xs font-bold uppercase tracking-widest bg-pink-500/10 px-3 py-1 rounded-full border border-pink-500/30">📞 Kênh Hỗ Trợ 24/7</span>
+                    <h2 class="text-3xl font-extrabold text-white mt-3">Kết Nối Với Chúng Tôi</h2>
+                    <p class="text-slate-400 text-sm mt-1">Lựa chọn kênh kết nối phù hợp bên dưới để được hỗ trợ trực tiếp</p>
+                </div>
+
+                <!-- 4 Mục Liên Hệ Cụ Thể -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                    
+                    <!-- Mục 1: Admin TModz -->
+                    <a href="https://facebook.com/link_admin_cua_ban" target="_blank" class="card-custom contact-card-1 p-6 rounded-2xl flex flex-col items-center text-center group">
+                        <div class="w-14 h-14 bg-pink-500/10 rounded-2xl flex items-center justify-center text-pink-400 text-2xl mb-4 border border-pink-500/30 group-hover:scale-110 transition">
+                            👑
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-1">Admin TModz</h3>
+                        <p class="text-slate-400 text-xs mb-4">Hỗ trợ trực tiếp vấn đề tài khoản & nạp thẻ</p>
+                        <span class="text-pink-400 text-xs font-semibold mt-auto flex items-center space-x-1"><span>Nhắn tin cá nhân</span> &rarr;</span>
+                    </a>
+
+                    <!-- Mục 2: Box Chat Zalo TModz -->
+                    <a href="https://zalo.me/g/link_box_zalo" target="_blank" class="card-custom contact-card-2 p-6 rounded-2xl flex flex-col items-center text-center group">
+                        <div class="w-14 h-14 bg-cyan-500/10 rounded-2xl flex items-center justify-center text-cyan-400 text-2xl mb-4 border border-cyan-500/30 group-hover:scale-110 transition">
+                            💬
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-1">Box Chat Zalo TModz</h3>
+                        <p class="text-slate-400 text-xs mb-4">Giao lưu, trao đổi kinh nghiệm chơi game</p>
+                        <span class="text-cyan-400 text-xs font-semibold mt-auto flex items-center space-x-1"><span>Tham gia nhóm Zalo</span> &rarr;</span>
+                    </a>
+
+                    <!-- Mục 3: Fanpage TModz -->
+                    <a href="https://facebook.com/fanpage_cua_ban" target="_blank" class="card-custom contact-card-3 p-6 rounded-2xl flex flex-col items-center text-center group">
+                        <div class="w-14 h-14 bg-blue-500/10 rounded-2xl flex items-center justify-center text-blue-400 text-2xl mb-4 border border-blue-500/30 group-hover:scale-110 transition">
+                            📢
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-1">Fanpage TModz</h3>
+                        <p class="text-slate-400 text-xs mb-4">Cập nhật thông tin và thông báo mới nhất</p>
+                        <span class="text-blue-400 text-xs font-semibold mt-auto flex items-center space-x-1"><span>Theo dõi trang</span> &rarr;</span>
+                    </a>
+
+                    <!-- Mục 4: Group Facebook TModz -->
+                    <a href="https://facebook.com/groups/group_cua_ban" target="_blank" class="card-custom contact-card-4 p-6 rounded-2xl flex flex-col items-center text-center group">
+                        <div class="w-14 h-14 bg-emerald-500/10 rounded-2xl flex items-center justify-center text-emerald-400 text-2xl mb-4 border border-emerald-500/30 group-hover:scale-110 transition">
+                            👥
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-1">Group Facebook TModz</h3>
+                        <p class="text-slate-400 text-xs mb-4">Cộng đồng game thủ đông đảo chia sẻ tool</p>
+                        <span class="text-emerald-400 text-xs font-semibold mt-auto flex items-center space-x-1"><span>Tham gia cộng đồng</span> &rarr;</span>
+                    </a>
+
+                </div>
+
+                <div class="border-t border-slate-900 pt-6 text-center text-slate-500 text-sm">
+                    <p>&copy; 2026 TModz Plus Audition Support. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+    <!-- Script tự động nạp dữ liệu bài viết từ posts.json -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('posts.json')
+                .then(response => response.json())
+                .then(posts => {
+                    const container = document.getElementById('posts-container');
+                    container.innerHTML = '';
+                    
+                    posts.forEach(post => {
+                        const postCard = `
+                            <div class="card-custom p-6 rounded-2xl flex flex-col justify-between hover:border-cyan-500/50">
+                                <div>
+                                    <div class="flex justify-between items-center mb-4">
+                                        <span class="bg-cyan-500/10 text-cyan-400 text-xs font-bold px-3 py-1 rounded-full border border-cyan-500/20">${post.category}</span>
+                                        <span class="text-slate-500 text-xs">${post.date}</span>
+                                    </div>
+                                    <h3 class="text-lg font-bold mb-3 text-cyan-300 hover:text-cyan-200 transition cursor-pointer">${post.title}</h3>
+                                    <p class="text-slate-400 text-sm leading-relaxed mb-6">${post.summary}</p>
+                                </div>
+                                <div>
+                                    <a href="${post.link}" class="text-cyan-400 hover:text-cyan-300 text-sm font-semibold flex items-center space-x-1 transition">
+                                        <span>Xem chi tiết &rarr;</span>
+                                    </a>
+                                </div>
+                            </div>
+                        `;
+                        container.innerHTML += postCard;
+                    });
+                })
+                .catch(error => {
+                    console.error('Không thể tải file posts.json:', error);
+                    document.getElementById('posts-container').innerHTML = '<p class="text-slate-500 col-span-3 text-center">Chưa có bài viết nào được cập nhật.</p>';
+                });
+        });
+    </script>
+</body>
+</html>
