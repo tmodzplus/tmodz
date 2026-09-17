@@ -21,6 +21,8 @@
 		
 		.copyright-neon {
 			animation: copyright-flash 2s infinite alternate;
+			color: #ffffff !important; 
+			font-weight: 700;
 		}
         
         /* Hiệu ứng nền Cyberpunk Glow */
@@ -314,7 +316,6 @@
     </section>
 
     <!-- Script tự động nạp bài viết từ posts.json -->
-    <!-- Script fetch file posts.json và đồng bộ màu sắc theo từng thẻ contact-card -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             fetch('posts.json?v=' + new Date().getTime())
