@@ -1,72 +1,11 @@
 [
-    {
-        "category": "Thủ Thuật",
-        "date": "17/09/2026",
-        "title": "Hướng dẫn cấu hình Auto Perfect Audition chuẩn xác",
-        "summary": "Tổng hợp các bước thiết lập thông số giúp bạn dễ dàng đạt chuỗi Perfect liên tục trong mọi trận đấu.",
-        "link": "#"
-    },
-    {
-        "category": "Cập Nhật",
-        "date": "15/09/2026",
-        "title": "Bản cập nhật v2.5 có gì mới và tối ưu ra sao?",
-        "summary": "Khám phá các tính năng mới giúp giảm giật lag tối đa và tăng tốc độ xử lý khi vào phòng đông.",
-        "link": "#"
-    },
-    {
-        "category": "Hỗ Trợ",
-        "date": "10/09/2026",
-        "title": "Tổng hợp các lỗi thường gặp và cách khắc phục nhanh",
-        "summary": "Giải đáp chi tiết các vấn đề phát sinh trong quá trình cài đặt và sử dụng công cụ hỗ trợ.",
-        "link": "#"
-    },
-    {
-        "category": "Sự Kiện",
-        "date": "05/09/2026",
-        "title": "Sự kiện đua Top VIP nhận quà khủng tháng 9",
-        "summary": "Tham gia ngay chuỗi sự kiện đặc quyền dành riêng cho thành viên VIP với nhiều phần thưởng giá trị.",
-        "link": "#"
-    },
-    {
-        "category": "Thủ Thuật",
-        "date": "01/09/2026",
-        "title": "Mẹo xử lý tình trạng mất kết nối khi đang nhảy sàn",
-        "summary": "Cách nhận biết đường truyền ổn định và các bước thiết lập dự phòng để không bị văng game.",
-        "link": "#"
-    },
-    {
-        "category": "Cập Nhật",
-        "date": "28/08/2026",
-        "title": "Ra mắt giao diện Cyberpunk Edition hoàn toàn mới",
-        "summary": "Nâng cấp toàn diện trải nghiệm thị giác với phong cách neon tương lai cực kỳ bắt mắt và hiện đại.",
-        "link": "#"
-    },
-    {
-        "category": "Hỗ Trợ",
-        "date": "22/08/2026",
-        "title": "Hướng dẫn cách kiểm tra Mã Máy nhanh chóng",
-        "summary": "Chi tiết các bước lấy thông tin phần cứng trên launcher để tiến hành kích hoạt gói VIP Mã Máy.",
-        "link": "#"
-    },
-    {
-        "category": "Cộng Đồng",
-        "date": "18/08/2026",
-        "title": "Vinh danh các cao thủ đạt chuỗi Perfect dài nhất tuần",
-        "summary": "Điểm danh những cái tên xuất sắc nhất trong bảng xếp hạng tuần qua của cộng đồng TModz Plus.",
-        "link": "#"
-    },
-    {
-        "category": "Thủ Thuật",
-        "date": "12/08/2026",
-        "title": "Tối ưu hóa phím tắt và macro cho người chơi chuyên nghiệp",
-        "summary": "Chia sẻ cấu hình phím tắt tối ưu giúp thao tác nhanh nhạy hơn trong các chế độ nhảy đôi, nhảy đơn.",
-        "link": "#"
-    },
-    {
-        "category": "Thông Báo",
-        "date": "05/08/2026",
-        "title": "Chính sách hỗ trợ và bảo hành bản quyền VIP mới nhất",
-        "summary": "Cập nhật các quy định về việc đổi máy, đổi tên tài khoản và quyền lợi đi kèm khi đăng ký VIP.",
-        "link": "#"
-    }
+  {
+    "slug": "huong-dan-cai-dat-tmodz-plus",
+    "title": "Hướng Dẫn Cài Đặt & Sử Dụng TModz Plus Mới Nhất",
+    "category": "Hướng Dẫn",
+    "date": "25/09/2026",
+    "summary": "Tổng hợp các bước cơ bản giúp bạn tải xuống, giải nén và kích hoạt phần mềm hỗ trợ Audition mượt mà không bị lỗi.",
+    "content": "<p class='mb-4'>Chào các bạn, hôm nay tụi mình xin gửi đến bài viết hướng dẫn chi tiết cách cài đặt và sử dụng phần mềm TModz Plus phiên bản mới nhất nhằm tối ưu hóa trải nghiệm chơi game Audition.</p><h3 class='text-xl font-bold text-white mb-2'>1. Tải xuống và giải nén</h3><p class='mb-4'>Sau khi tải tệp cài đặt về máy, hãy sử dụng mật khẩu giải nén là <strong class='text-amber-400'>TModz</strong> để tiến hành giải nén tệp tin.</p><h3 class='text-xl font-bold text-white mb-2'>2. Kích hoạt tài khoản VIP</h3><p class='mb-4'>Bạn có thể liên hệ trực tiếp với Admin qua Zalo để đăng ký gói VIP ID hoặc VIP Mã Máy nhằm mở khóa toàn bộ tính năng.</p>",
+    "link": "post.html?blog=huong-dan-cai-dat-tmodz-plus"
+  }
 ]
